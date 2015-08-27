@@ -3,7 +3,6 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
 
@@ -11,6 +10,14 @@
   </head>
 
   <body>
+    <script src="javascripts/jquery-1.11.3.js"></script>
+    <script src="javascripts/utils.js"></script>
+    <script src="javascripts/movingObject.js"></script>
+    <script src="javascripts/asteroid.js"></script>
+    <script src="javascripts/ship.js"></script>
+    <script src="javascripts/bullet.js"></script>
+    <script src="javascripts/game.js"></script>
+    <script src="javascripts/gameView.js"></script>
 
     <header>
       <div class="container">
@@ -32,8 +39,21 @@
 
 <p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
       </section>
+
+<!-- THE GAME -->
     </div>
 
+    <div id="score"></div>
+    <div id="game-screen">
+      <div class="game-over-message"></div>
+      <canvas id="game-canvas" width="1000px" height="700px"></canvas>
+
+    </div>
+
+    <script>
+      var canvasEl = document.getElementById("game-canvas");
+      new GameView(new Asteroids.Game(), canvasEl).start();
+    </script>
 
   </body>
 </html>

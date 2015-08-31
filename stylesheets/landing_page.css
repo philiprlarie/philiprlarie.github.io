@@ -1,0 +1,111 @@
+/* General style */
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* About section style */
+#about img {
+  border-radius: 50%;
+  border: 1px dashed #b5e853;
+  float: left;
+  margin: 25px;
+}
+#about p {
+  text-indent: 1em;
+
+}
+
+
+/* Projects section style */
+.projects-list {
+  width: 800px;
+  margin: auto;
+  list-style: none;
+}
+
+.projects-list > li::before {
+  content: none;
+}
+
+.project {
+  padding: 30px 0;
+  margin-bottom: 20px;
+  font-weight: 300;
+  border-top: 1px dashed #b5e853;
+}
+
+.project > figure {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin: 1px;
+}
+
+.project-desc {
+  padding: 0px 20px;
+  float: right;
+  width: 398px;
+}
+.project-desc > ul {
+  text-align: left;
+  font-size: 15px;
+  text-indent: -1em;
+}
+
+.project-desc > ul > li {
+  margin: 15px;
+}
+
+.project h2 {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.project h3 {
+  font-size: 15px;
+  font-style: italic;
+  text-align: left;
+}
+
+.project-links {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: 0;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  padding: 10px;
+  transition: opacity 0.5s;
+}
+
+.project-links a {
+  display: block;
+  margin: auto;
+  margin-top: 35px;
+  padding: 10px;
+  border: 1px solid #b5e853;
+  background: #151515 url("../images/bkg.png") 0 0;
+  color: #b5e853;
+  width: 80px;
+  transition: background 0.2s;
+}
+
+.project-links a:hover{
+  background: gray;
+}
+
+.project-links:hover {
+  opacity: 1;
+}
+
+.project img{
+  border: 1px dashed #b5e853;
+  width: 298px;
+  height: 198px;
+}

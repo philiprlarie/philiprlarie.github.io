@@ -8,7 +8,16 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/landing_page.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/asteroids.css">
     <link rel="shortcut icon" type="image/png" href="./images/favicon.ico">
-
+    <div class="nav-bar">
+      <nav class="group nav-menu">
+        <ul class="nav-list group">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+         </ul>
+       </nav>
+    </div>
     <title>Philiprlarie.GitHub.io by philiprlarie</title>
   </head>
 
@@ -98,8 +107,7 @@ Since then, I knew coding was where it’s at. I started learning Ruby on my own
       <li class="project group asteroids">
           <figure><img src="./images/asteroids.png">
             <div class="project-links">
-              <!-- TODO:  -->
-              <a href="http://this needs to be a link on page">Play</a>
+              <a href="http://philiprlarie.github.io/asteroids/">Play</a>
               <a href="https://github.com/philiprlarie/asteroids">Github</a>
             </div>
           </figure>
@@ -144,20 +152,6 @@ Since then, I knew coding was where it’s at. I started learning Ruby on my own
     <ul class="contact-list group">
       <li><a href="./docs/PhilipLarieResume.pdf"><img src="./images/resume.png"></a></li>
     </ul>
-  </div>
-</section>
-
-<section class="game">
-  <div class="container">
-    <div id="score"></div>
-    <div id="game-screen">
-      <div class="game-over-message"></div>
-      <canvas id="game-canvas" width="1000px" height="700px"></canvas>
-    </div>
-    <script>
-      var canvasEl = document.getElementById("game-canvas");
-      new GameView(new Asteroids.Game(), canvasEl).start();
-    </script>
   </div>
 </section>
 

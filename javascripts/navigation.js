@@ -20,7 +20,7 @@
       return;
     }
 
-    var pos = $(id).offset().top;
+    var pos = $(id).offset().top - 46;
 
     $('body, html').animate({ scrollTop: pos });
   };

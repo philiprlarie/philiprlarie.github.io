@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/landing_page.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/asteroids.css">
     <link rel="shortcut icon" type="image/png" href="./images/favicon.ico">
     <div class="nav-bar">
       <nav class="group nav-menu">
@@ -23,13 +22,7 @@
 
   <body>
     <script src="javascripts/jquery-1.11.3.js"></script>
-    <script src="javascripts/utils.js"></script>
-    <script src="javascripts/movingObject.js"></script>
-    <script src="javascripts/asteroid.js"></script>
-    <script src="javascripts/ship.js"></script>
-    <script src="javascripts/bullet.js"></script>
-    <script src="javascripts/game.js"></script>
-    <script src="javascripts/gameView.js"></script>
+    <script src="javascripts/navigation.js"></script>
 
     <header>
       <div class="container">
@@ -154,6 +147,21 @@ Since then, I knew coding was where it’s at. I started learning Ruby on my own
     </ul>
   </div>
 </section>
-
 </body>
+
+<script>
+  $(function() {
+    new Navigation.NavBar($(".nav-bar"));
+    var target = $('#about').offset().top;
+
+    var interval = setInterval(function() {
+      if ($(window).scrollTop() >= target) {
+        $('.nav-bar').addClass("opaque");
+      } else {
+        $('.nav-bar').removeClass("opaque");
+      }
+    }, 100);
+  })
+</script>
+
 </html>

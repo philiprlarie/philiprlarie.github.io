@@ -210,6 +210,13 @@ header h1 {
   height: 198px;
 }
 
+/* cool stuff */
+#cool-stuff canvas {
+	display: block;
+	padding: 40px;
+	margin: 100px auto;
+	border: 1px dashed #b5e853;
+}
 /* contact */
 #contact {
   text-align: center;

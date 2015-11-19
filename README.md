@@ -1,2 +1,3 @@
 # philiprlarie.github.io
-Asteroids online
+
+This is my portfolio sight. Learn about me and check out my cool projects!

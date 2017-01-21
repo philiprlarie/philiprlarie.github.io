@@ -1,6 +1,6 @@
-(function () {
-  var canvas = $("#canvas1")[0];
-  var context = canvas.getContext("2d");
+$(function () {
+  var canvas = $('#canvas1')[0];
+  var context = canvas.getContext('2d');
 
   var center = [canvas.width / 2, canvas.height / 2];
   var innerRadius = canvas.width / 3;
@@ -11,7 +11,7 @@
     circPoints.push((i * 2 * Math.PI) / numLines);
   }
 
-  drawLines = function (offset) {
+  function drawLines (offset) {
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     context.beginPath();
@@ -25,14 +25,14 @@
         center[1] + outerRadius * Math.sin(circPoint - offset)
       );
     });
-    
-    context.strokeStyle = "#b5e853";
+
+    context.strokeStyle = '#b5e853';
     context.stroke();
-  };
+  }
 
   var offset = 0;
   setInterval(function () {
     drawLines(offset);
-    offset = offset + 0.003;
-  }, 1000/60);
-})();
+    offset = offset + 0.006;
+  }, 1000 / 30);
+});

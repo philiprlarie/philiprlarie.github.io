@@ -1,16 +1,16 @@
-(function () {
-  var canvas = $("#canvas2")[0];
-  var context = canvas.getContext("2d");
+$(function () {
+  var canvas = $('#canvas2')[0];
+  var context = canvas.getContext('2d');
 
-  Segment = function(startPos, endPos) {
+  function Segment (startPos, endPos) {
     this.x0 = startPos[0];
     this.y0 = startPos[1];
     this.x1 = endPos[0];
     this.y1 = endPos[1];
-    this.len = Math.sqrt((this.x1-this.x0)*(this.x1-this.x0) + (this.y1-this.y0)*(this.y1-this.y0));
-  };
+    this.len = Math.sqrt((this.x1 - this.x0) * (this.x1 - this.x0) + (this.y1 - this.y0) * (this.y1 - this.y0));
+  }
 
-  Segment.prototype.recurse = function() {
+  Segment.prototype.recurse = function () {
     var x0 = this.x0;
     var y0 = this.y0;
     var x1 = this.x1;
@@ -18,8 +18,8 @@
     var point1 = [x0, y0];
     var point2 = [1 / 3 * (2 * x0 + x1), 1 / 3 * (2 * y0 + y1)];
     var point3 = [
-      (x0 + x1) / 2 + (y1-y0) / Math.sqrt(3) / 2,
-      (y0 + y1) / 2 - (x1-x0) / Math.sqrt(3) / 2
+      (x0 + x1) / 2 + (y1 - y0) / Math.sqrt(3) / 2,
+      (y0 + y1) / 2 - (x1 - x0) / Math.sqrt(3) / 2
     ];
     var point4 = [1 / 3 * (2 * x1 + x0), 1 / 3 * (2 * y1 + y0)];
     var point5 = [x1, y1];
@@ -34,24 +34,39 @@
 
   var w = canvas.width;
   var h = canvas.height;
+
   var tri1 = [w / 2, h / 2 - w * 4 / 9];
-  var tri2 = [w / 2 + 2 * w / 3 / Math.sqrt(3) , h / 2 + w * 2 / 9];
-  var tri3 = [w / 2 - 2 * w / 3 / Math.sqrt(3) , h / 2 + w * 2 / 9];
+  var tri2 = [w / 2 + 2 * w / 3 / Math.sqrt(3), h / 2 + w * 2 / 9];
+  var tri3 = [w / 2 - 2 * w / 3 / Math.sqrt(3), h / 2 + w * 2 / 9];
   var segments = [
     new Segment(tri1, tri2),
     new Segment(tri2, tri3),
     new Segment(tri3, tri1)
   ];
 
-  setInterval(function() {
-      context.clearRect(0, 0, canvas.width, canvas.height);
-      context.beginPath();
-      segments.forEach(function(segment) {
-        context.moveTo(segment.x0, segment.y0);
-        context.lineTo(segment.x1, segment.y1);
-      });
-      context.strokeStyle = "#b5e853";
-      context.stroke();
+  var count = 0; // used for getting the same speed for different levels of recursions
+  setInterval(function () {
+    if (segments.length <= 3 * 4 && count < 4 * 4 * 4 * 4) {
+      count++;
+      return;
+    }
+    if (segments.length <= 3 * 4 * 4 && count < 4 * 4 * 4) {
+      count++;
+      return;
+    }
+    if (segments.length <= 3 * 4 * 4 * 4 && count < 4 * 4) {
+      count++;
+      return;
+    }
+    if (segments.length <= 3 * 4 * 4 * 4 * 4 && count < 4) {
+      count++;
+      return;
+    }
+    // hold final snowflake for a bit before the series starts again
+    if (segments.length === 3 * 4 * 4 * 4 * 4 * 4 && count < 4 * 4 * 4 * 4) {
+      count++;
+      return;
+    }
 
     if (segments.length < 3 * 4 * 4 * 4 * 4 * 4) {
       var oldSeg = segments.shift();
@@ -65,5 +80,16 @@
         new Segment(tri3, tri1)
       ];
     }
-  }, 1000/120);
-})();
+
+    count = 0;
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.beginPath();
+    segments.forEach(function (segment) {
+      context.moveTo(segment.x0, segment.y0);
+      context.lineTo(segment.x1, segment.y1);
+    });
+    context.strokeStyle = '#b5e853';
+    context.stroke();
+
+  }, 1000 / 120);
+});

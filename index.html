@@ -1,95 +1,146 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/landing_page.css">
-    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico">
-    <div class="nav-bar">
-      <nav class="group nav-menu">
-        <ul class="nav-list group">
-          <li><a href="#about"><h3>About</h3></a></li>
-          <li><a href="#skills"><h3>Skills</h3></a></li>
-          <li><a href="#projects"><h3>Projects</h3></a></li>
-          <li><a href="#cool-stuff"><h3>Cool Stuff</h3></a></li>
-          <li><a href="#contact"><h3>Contact</h3></a></li>
-         </ul>
-       </nav>
-    </div>
-    <title>Philiprlarie.GitHub.io by philiprlarie</title>
-  </head>
 
-  <body>
-    <script src="javascripts/jquery-1.11.3.js"></script>
-    <script src="javascripts/navigation.js"></script>
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/landing_page.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="javascripts/navigation.js"></script>
+  <script src="javascripts/lines_on_circle.js"></script>
+  <script src="javascripts/koch_snowflake.js"></script>
+  <script src="javascripts/zoom_snowflake.js"></script>
+  <title>Philip Larie</title>
+</head>
 
-    <header>
-      <div class="container">
-        <h1>Philip Larie</h1>
-        <h2>Software Engineer</h2>
-
-        <div id="downloads">
-          <a href="https://github.com/philiprlarie" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+<body>
+  <nav>
+    <div class="nav-bar clearfix">
+      <div class="nav-list row hidden-xs">
+        <div class="col-xs-2 col-xs-offset-1">
+          <a href="#about"><h3>About</h3></a>
+        </div>
+        <div class="col-xs-2">
+          <a href="#skills"><h3>Skills</h3></a>
+        </div>
+        <div class="col-xs-2">
+          <a href="#projects"><h3>Projects</h3></a>
+        </div>
+        <div class="col-xs-2">
+          <a href="#cool-stuff"><h3>Fun</h3></a>
+        </div>
+        <div class="col-xs-2">
+          <a href="#contact"><h3>Contact</h3></a>
         </div>
       </div>
-    </header>
 
-<section id="about">
-  <div class="container">
-    <h1>About</h1>
-    <img src="images/Philip_Larie.png" alt="" />
-<p>I’m a web developer living in San Francisco.</p>
+      <div class="visible-xs glyphicon glyphicon-menu-hamburger"></div>
+    </div>
 
-<p>
-I grew up in good old New Hampshire and went to school there too. At Dartmouth College, I got a BA Physics with a minor in Engineering.
-</p>
-<p>
-The coding bug bit me one day when I had to create a graph to show the autocorrelation of a 2 dimensional annular ring for a physics class on Optics. The calculations were really annoying and I would have had to do many calculations for different sized rings. Instead of spending my time with pen and paper, I sat down at my keyboard a banged out a Matlab script to generate the plot for me. It may have taken a little bit longer, but the satisfaction at the end was worth it.
-</p>
+    <div class="visible-xs mobile-nav">
+      <div class="dropdown-nav">
+        <a href="#about"><h3>About</h3></a>
+      </div>
+      <div class="dropdown-nav">
+        <a href="#skills"><h3>Skills</h3></a>
+      </div>
+      <div class="dropdown-nav">
+        <a href="#projects"><h3>Projects</h3></a>
+      </div>
+      <div class="dropdown-nav">
+        <a href="#cool-stuff"><h3>Fun</h3></a>
+      </div>
+      <div class="dropdown-nav">
+        <a href="#contact"><h3>Contact</h3></a>
+      </div>
+    </div>
+  </nav>
 
-<p>
-Since then, I knew coding was where it’s at. I started learning Ruby on my own. I applied and was accepted to App Academy, an intensive, 12 week long web development bootcamp. I learned the full stack there. Ruby, Rails, JavaScript, jQuery, Backbone.js, HTML, CSS, SQL, git.
-</p>
+  <header>
+    <div class="container">
+      <h1 class="margin-bottom-0">Philip Larie</h1>
+      <h2 class="margin-left-20">Software Engineer</h2>
+      <div class="margin-left-20">
+        <a href="https://github.com/philiprlarie" class="btn btn-github"><span class="icon"></span>View my GitHub</a>
+      </div>
+    </div>
+  </header>
 
-<p>It feels great to have these tools under my belt. Check out some of the things I’ve made!</p>
-  </div>
-</section>
+  <section id="about">
+    <div class="container">
+      <h1>About</h1>
+      <div class="image-holder">
+        <img src="images/facebookFace.jpg" alt="" />
+      </div>
+      <p>I’m a web developer living in San Francisco.</p>
+      <p>I grew up in good old New Hampshire and went to school there too. At Dartmouth College, I got a BA Physics with a minor in Engineering.</p>
+      <p>The coding bug bit me one day when I had to create a graph to show the autocorrelation of a 2 dimensional annular ring for a physics class on Optics. The calculations were really annoying and I would have had to do many calculations for different sized rings. Instead of spending my time with pen and paper, I sat down at my keyboard a banged out a Matlab script to generate the plot for me. It may have taken a little bit longer, but the satisfaction at the end was worth it.</p>
+      <p>Since then, I knew coding was where it’s at. I started learning Ruby on my own. I applied and was accepted to App Academy, an intensive, 12 week long web development bootcamp. I learned the full stack there. Ruby, Rails, JavaScript, jQuery, Backbone.js, HTML, CSS, SQL, git.</p>
+      <p>It feels great to have these tools under my belt. Check out some of the things I’ve made!</p>
+    </div>
+  </section>
 
-<section id="skills" class="group">
-  <div class="container">
-    <h1>Skills and Technologies</h1>
-    <ul class="skills-list group">
-      <li><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)"><img src="./images/ruby.png"></a><h3>Ruby</h3></li>
-      <li><a href="https://en.wikipedia.org/wiki/Ruby_on_Rails"><img src="./images/rails.png"></a><h3>Rails</h3></li>
-      <li><a href="https://en.wikipedia.org/wiki/JavaScript"><img src="./images/javascript.png"></a><h3>JavaScript</h3></li>
-      <li><a href="http://backbonejs.org/"><img src="./images/backbone.png"></a><h3>Backbone</h3></li>
-      <li><a href="https://en.wikipedia.org/wiki/Git_%28software%29"><img src="./images/git.png"></a><h3>Git</h3></li>
-    </ul>
-    <ul class="skills-list group">
-      <li><a href="https://en.wikipedia.org/wiki/JQuery"><img src="./images/jquery.png"></a><h3>jQuery</h3></li>
-      <li><a href="https://en.wikipedia.org/wiki/SQL"><img src="./images/sql.png"></a><h3>SQL</h3></li>
-      <li><a href="https://en.wikipedia.org/wiki/HTML5"><img src="./images/HTML5.png"></a><h3>HTML5</h3></li>
-      <li><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"><img src="./images/css.png"></a><h3>CSS3</h3></li>
-      <li><a href="http://www.mathworks.com/products/matlab/"><img src="./images/matlab.png"></a><h3>MATLAB</h3></li>
-    </ul>
-  </div>
-</section>
 
-<section id="projects">
-  <div class="container">
-    <h1>Projects</h1>
-    <ul class="projects-list">
-      <li class="project group musicmastrmind">
-        <figure><img src="./images/musicmastrmind.png">
-          <div class="project-links">
-            <a href="https://musicmastrmind.herokuapp.com/">Live</a>
-            <a href="https://github.com/philiprlarie/musicmastrmind">Github</a>
-          </div>
-        </figure>
-        <div class="project-desc group">
+
+
+
+  <section id="skills">
+    <div class="container">
+      <h1>Skills and Technologies</h1>
+      <div class="row skills-list">
+        <div class="col-sm-3 col-xs-6">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="./images/javascript.png"></a>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <a href="https://www.java.com/en/"><img src="./images/java.png"></a>
+          <h3>Java</h3>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"><img src="./images/HTML5.png"></a>
+          <h3>HTML5</h3>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <a href="https://jquery.com/"><img src="./images/jquery.png"></a>
+          <h3>jQuery</h3>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <a href="https://nodejs.org/en/about/"><img src="./images/node.png"></a>
+          <h3>Node</h3>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <a href="https://en.wikipedia.org/wiki/Git_%28software%29"><img src="./images/git.png"></a>
+          <h3>Git</h3>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"><img src="./images/css.png"></a>
+          <h3>CSS3</h3>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <a href="https://www.ruby-lang.org/en/"><img src="./images/ruby.png"></a>
+          <h3>Ruby</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h1>Projects</h1>
+      <div class="project row">
+        <div class="col-sm-6 col-xs-12">
           <h2>MusicMastrMind</h2>
+          <figure><img src="./images/musicmastrmind.png">
+            <div class="project-links">
+              <a href="https://musicmastrmind.herokuapp.com/">Live</a>
+              <a href="https://github.com/philiprlarie/musicmastrmind">Github</a>
+            </div>
+          </figure>
+        </div>
+        <div class="project-desc group col-sm-6 col-xs-12">
           <h3>Song meanings website based on Rap Genius</h3>
           <ul>
             <li>Bootstraps user data on page load to avoid extra AJAX requests.</li>
@@ -97,107 +148,97 @@ Since then, I knew coding was where it’s at. I started learning Ruby on my own
             <li>Nested associations reduce server requests while pulling data from multiple database tables.</li>
           </ul>
         </div>
-      </li>
-      <li class="project group asteroids">
+      </div>
+
+      <div class="project row">
+        <div class="col-sm-6 col-xs-12">
+          <h2>Asteroids</h2>
           <figure><img src="./images/asteroids.png">
             <div class="project-links">
               <a href="http://philiprlarie.github.io/asteroids/">Play</a>
               <a href="https://github.com/philiprlarie/asteroids">Github</a>
             </div>
           </figure>
-          <div class="project-desc group">
-            <h2>Asteroids</h2>
-            <h3>Arcade game made with HTML5 Canvas and JacaScript and run completely in the browser</h3>
-            <ul>
-              <li>Sprite-based visual interface.</li>
-              <li>Object oriented design made clean with class inheritance.</li>
-              <li>Asteroid volocities and rotation rates follow a modified guassian distribution.</li>
-            </ul>
-          </div>
-        </li>
-        <li class="project group rails-lite">
+        </div>
+        <div class="project-desc group col-sm-6 col-xs-12">
+          <h3>Arcade game made with HTML5 Canvas and JacaScript and run completely in the browser</h3>
+          <ul>
+            <li>Sprite-based visual interface.</li>
+            <li>Object oriented design made clean with class inheritance.</li>
+            <li>Asteroid volocities and rotation rates follow a modified guassian distribution.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project row">
+        <div class="col-sm-6 col-xs-12">
+          <h2>Rails Lite</h2>
           <figure><img src="./images/rails-lite.png">
             <div class="project-links">
               <a href="https://github.com/philiprlarie/rails-lite">Github</a>
             </div>
           </figure>
-          <div class="project-desc group">
-            <h2>Rails Lite</h2>
-            <h3>MVC web application framework inspired by and featuring the core components of Rails</h3>
-            <ul>
-              <li>Controller base class provides core functionality for rendering html responses.</li>
-              <li>Programmer-friendly interface for URL, query string, and request-body parameters.</li>
-              <li>Stores session as well as flash cookies.</li>
-            </ul>
-          </div>
-        </li>
-		<li class="project group">
+        </div>
+        <div class="project-desc group col-sm-6 col-xs-12">
+          <h3>MVC web application framework inspired by and featuring the core components of Rails</h3>
+          <ul>
+            <li>Controller base class provides core functionality for rendering html responses.</li>
+            <li>Programmer-friendly interface for URL, query string, and request-body parameters.</li>
+            <li>Stores session as well as flash cookies.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project row">
+        <div class="col-sm-6 col-xs-12">
+          <h2>Sight Reading Practice</h2>
           <figure><img src="./images/sight-reading.png">
             <div class="project-links">
               <a href="http://philiprlarie.github.io/sight_reading">Live</a>
               <a href="https://github.com/philiprlarie/sight_reading">Github</a>
             </div>
           </figure>
-          <div class="project-desc group">
-            <h2>Sight Reading Practice</h2>
-            <h3>Javascript app run in the browser for musicians to practice sight reading music notation in both treble and bass cleff </h3>
-            <ul>
-              <li>Scraped website to download piano sounds.</li>
-              <li>Predownload audio files before melody is played for smooth playback.</li>
-              <li>Event listeners and interval timeouts determine if user correctly completes the excersize.</li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-  </div>
-</section>
+        </div>
+        <div class="project-desc group col-sm-6 col-xs-12">
+          <h3>Javascript app run in the browser for musicians to practice sight reading music notation in both treble and bass cleff </h3>
+          <ul>
+            <li>Scraped website to download piano sounds.</li>
+            <li>Predownload audio files before melody is played for smooth playback.</li>
+            <li>Event listeners and interval timeouts determine if user correctly completes the excersize.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="cool-stuff" class="group">
-  <div class="container">
-    <h1>Cool Things</h1>
-	<h3>Fractals and fun using JavaScript and HTML5 Canvas</h3>
-    <canvas id="canvas1" width="600" height="600"></canvas>
-    <canvas id="canvas2" width="600" height="600"></canvas>
-    <canvas id="canvas3" width="600" height="600"></canvas>
-    <script src="javascripts/lines_on_circle.js"></script>
-    <script src="javascripts/koch_snowflake.js"></script>
-    <script src="javascripts/zoom_snowflake.js"></script>
-  </div>
-</section>
+  <section id="cool-stuff" class="group">
+    <div class="container">
+      <h1>Cool Things</h1>
+      <h3>Fractals and fun using JavaScript and HTML5 Canvas</h3>
+      <canvas id="canvas1" width="600" height="600"></canvas>
+      <canvas id="canvas2" width="600" height="600"></canvas>
+      <canvas id="canvas3" width="600" height="600"></canvas>
+    </div>
+  </section>
 
-<section id="contact" class="group">
-  <div class="container">
-    <h1>Contact Me</h1>
-    <ul class="contact-list group">
-      <li><a href="https://github.com/philiprlarie"><img src="./images/github.png"></a></li>
-      <li><a href="mailto:philiprlarie@gmail.com"><img src="./images/email.png"></a></li>
-      <li><a href="https://linkedin.com/in/philiplarie"><img src="./images/linkedin.png"></a></li>
-    </ul>
-    <h1>Download my Resume</h1>
-    <ul class="contact-list group">
-      <li><a href="./docs/PhilipLarieResume.pdf"><img src="./images/resume.png"></a></li>
-    </ul>
-    <h1>Or Check out my Blog</h1>
-    <ul class="contact-list group">
-      <li><a href="http://philiprlarie.tumblr.com/"><img src="./images/tumblr.png"></a></li>
-    </ul>
-  </div>
-</section>
+  <section id="contact" class="group">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <div class="contact-square">
+        <a href="mailto:philiprlarie@gmail.com"><img src="./images/email.png"></a>
+      </div>
+      <div class="contact-square">
+        <a href="https://linkedin.com/in/philiplarie"><img src="./images/linkedin.png"></a>
+      </div>
+      <div class="contact-square">
+        <a href="https://github.com/philiprlarie"><img src="./images/github.png"></a>
+      </div>
+      <h1>Or Download my Resume</h1>
+      <div class="contact-square">
+        <a href="./docs/PhilipLarieResume.pdf"><img src="./images/resume.png"></a>
+      </div>
+    </div>
+  </section>
 </body>
-
-<script>
-  $(function() {
-    new Navigation.NavBar($(".nav-bar"));
-    var target = $('#about').offset().top;
-
-    var interval = setInterval(function() {
-      if ($(window).scrollTop() >= target) {
-        $('.nav-bar').addClass("opaque");
-      } else {
-        $('.nav-bar').removeClass("opaque");
-      }
-    }, 100);
-  })
-</script>
 
 </html>

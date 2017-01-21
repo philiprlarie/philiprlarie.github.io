@@ -82,14 +82,17 @@ $(function () {
     }
 
     count = 0;
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.beginPath();
-    segments.forEach(function (segment) {
-      context.moveTo(segment.x0, segment.y0);
-      context.lineTo(segment.x1, segment.y1);
-    });
-    context.strokeStyle = '#b5e853';
-    context.stroke();
+
+    if ($(canvas).is(':visible')) {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.beginPath();
+      segments.forEach(function (segment) {
+        context.moveTo(segment.x0, segment.y0);
+        context.lineTo(segment.x1, segment.y1);
+      });
+      context.strokeStyle = '#b5e853';
+      context.stroke();
+    }
 
   }, 1000 / 120);
 });

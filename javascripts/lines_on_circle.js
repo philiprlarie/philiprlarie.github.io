@@ -32,7 +32,9 @@ $(function () {
 
   var offset = 0;
   setInterval(function () {
-    drawLines(offset);
+    if ($(canvas).is(':visible')) {
+      drawLines(offset);
+    }
     offset = offset + 0.006;
   }, 1000 / 30);
 });

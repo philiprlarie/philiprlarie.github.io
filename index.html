@@ -72,17 +72,12 @@
       <div class="image-holder">
         <img src="images/facebookFace.jpg" alt="" />
       </div>
-      <p>I’m a web developer living in San Francisco.</p>
-      <p>I grew up in good old New Hampshire and went to school there too. At Dartmouth College, I got a BA Physics with a minor in Engineering.</p>
-      <p>The coding bug bit me one day when I had to create a graph to show the autocorrelation of a 2 dimensional annular ring for a physics class on Optics. The calculations were really annoying and I would have had to do many calculations for different sized rings. Instead of spending my time with pen and paper, I sat down at my keyboard a banged out a Matlab script to generate the plot for me. It may have taken a little bit longer, but the satisfaction at the end was worth it.</p>
-      <p>Since then, I knew coding was where it’s at. I started learning Ruby on my own. I applied and was accepted to App Academy, an intensive, 12 week long web development bootcamp. I learned the full stack there. Ruby, Rails, JavaScript, jQuery, Backbone.js, HTML, CSS, SQL, git.</p>
-      <p>It feels great to have these tools under my belt. Check out some of the things I’ve made!</p>
+      <p>I’m a software engineer living in San Francisco. I grew up in good old New Hampshire and went to school there too. At Dartmouth College, I earned a bachelor’s degree in Physics with a minor in Engineering.</p>
+      <p>My introduction to computer science was actually through a physics class. I learned my first algorithm, Shor’s algorithm for integer factorization, in a quantum computing class. I then realized that the field of computer science has an expansive theoretical foundation and to this day is full of interesting, unanswered questions. Once I familiarized myself with some of the mathematical underpinnings of computer science, I decided to gain practical software engineering experience. After finishing college, I went on to complete the coding bootcamp, App Academy.</p>
+      <p>Shortly thereafter, I joined Lending Club as an associate software engineer. I started working on the front end. I needed to pick up Javascript, Node, and internal frameworks along the way, which has been a lot of fun since I love to learn. Trying to get closer to my mathematical roots, I’ve been eagerly moving down the stack and have started learning Java in order to work on Lending Club’s back-end microservice architecture.</p>
+      <p>I’ve been really happy with my decision to pursue software engineering because computers are today’s most powerful tool for solving problems. As I continue my career in software engineering, I look forward to tackling more complex and important problems.</p>
     </div>
   </section>
-
-
-
-
 
   <section id="skills">
     <div class="container">
@@ -127,25 +122,69 @@
   <section id="projects">
     <div class="container">
       <h1>Projects</h1>
+
       <div class="project row">
         <div class="col-sm-6 col-xs-12">
-          <h2>MusicMastrMind</h2>
-          <figure><img src="./images/musicmastrmind.png">
+          <h2>Mandelbrot Fractal Explorer</h2>
+          <figure><img src="./images/mandelbrotImageSmall.png">
             <div class="project-links">
-              <a href="https://musicmastrmind.herokuapp.com/">Live</a>
-              <a href="https://github.com/philiprlarie/musicmastrmind">Github</a>
+              <a href="https://github.com/philiprlarie/mandelbrotJava">Github</a>
+              <a href="./images/mandelbrotImage.png">Image</a>
             </div>
           </figure>
         </div>
         <div class="project-desc group col-sm-6 col-xs-12">
-          <h3>Song meanings website based on Rap Genius</h3>
+          <h3>Swing applet for exploring and capturing images of mathematically-generated fractals</h3>
           <ul>
-            <li>Bootstraps user data on page load to avoid extra AJAX requests.</li>
-            <li>Custom secure authentication using BCrypt. Passwords stored as secret hash instead of plain-text.</li>
-            <li>Nested associations reduce server requests while pulling data from multiple database tables.</li>
+            <li>Performant image generation and careful design enable smooth, continuous zoom.</li>
+            <li>Multithreading provides seamless, uninterrupted user experience.</li>
+            <li>Powerful zoom allows user to explore an area greater than the surface area of the moon.</li>
           </ul>
         </div>
       </div>
+
+
+      <div class="project row">
+        <div class="col-sm-6 col-xs-12">
+          <h2>Provider Onboarding Experience</h2>
+          <figure><img src="./images/eReg.png">
+            <div class="project-links">
+              <a href="https://providers.lendingclub.com/patientsolutions/enroll">Live</a>
+            </div>
+          </figure>
+        </div>
+        <div class="project-desc group col-sm-6 col-xs-12">
+          <h3>Registration process for Lending Club’s medical provider clients</h3>
+          <ul>
+            <li>Responsibility and ownership as sole UI engineer for this project.</li>
+            <li>Reduced average registration time from 10 business days to only 1.</li>
+            <li>Built flow using open-source and internal frameworks.</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="project row">
+        <div class="col-sm-6 col-xs-12">
+          <h2>Sight Reading Practice</h2>
+          <figure><img src="./images/sight-reading.png">
+            <div class="project-links">
+              <a href="http://philiprlarie.github.io/sight_reading">Live</a>
+              <a href="https://github.com/philiprlarie/sight_reading">Github</a>
+            </div>
+          </figure>
+        </div>
+        <div class="project-desc group col-sm-6 col-xs-12">
+          <h3>Javascript app run in the browser for musicians to practice sight reading music notation in both treble and bass cleff </h3>
+          <ul>
+            <li>Scraped website to download piano sounds.</li>
+            <li>Predownload audio files before melody is played for smooth playback.</li>
+            <li>Event listeners and interval timeouts determine if user correctly completes the excersize.</li>
+          </ul>
+        </div>
+      </div>
+
+
 
       <div class="project row">
         <div class="col-sm-6 col-xs-12">
@@ -167,44 +206,12 @@
         </div>
       </div>
 
-      <div class="project row">
-        <div class="col-sm-6 col-xs-12">
-          <h2>Rails Lite</h2>
-          <figure><img src="./images/rails-lite.png">
-            <div class="project-links">
-              <a href="https://github.com/philiprlarie/rails-lite">Github</a>
-            </div>
-          </figure>
-        </div>
-        <div class="project-desc group col-sm-6 col-xs-12">
-          <h3>MVC web application framework inspired by and featuring the core components of Rails</h3>
-          <ul>
-            <li>Controller base class provides core functionality for rendering html responses.</li>
-            <li>Programmer-friendly interface for URL, query string, and request-body parameters.</li>
-            <li>Stores session as well as flash cookies.</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="project row">
-        <div class="col-sm-6 col-xs-12">
-          <h2>Sight Reading Practice</h2>
-          <figure><img src="./images/sight-reading.png">
-            <div class="project-links">
-              <a href="http://philiprlarie.github.io/sight_reading">Live</a>
-              <a href="https://github.com/philiprlarie/sight_reading">Github</a>
-            </div>
-          </figure>
-        </div>
-        <div class="project-desc group col-sm-6 col-xs-12">
-          <h3>Javascript app run in the browser for musicians to practice sight reading music notation in both treble and bass cleff </h3>
-          <ul>
-            <li>Scraped website to download piano sounds.</li>
-            <li>Predownload audio files before melody is played for smooth playback.</li>
-            <li>Event listeners and interval timeouts determine if user correctly completes the excersize.</li>
-          </ul>
-        </div>
-      </div>
+
+
+
+
+
     </div>
   </section>
 

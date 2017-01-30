@@ -305,9 +305,18 @@ header .btn .icon {
 }
 
 .project img{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project figure {
   border: 1px dashed #b5e853;
-  width: 298px;
   height: 198px;
+  width: 298px;
+  overflow: hidden;
+  position: relative;
 }
 
 /* cool stuff */

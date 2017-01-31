@@ -1,3 +1,3 @@
 # philiprlarie.github.io
 
-This is my portfolio sight. Learn about me and check out my projects!
+[This](https://philiprlarie.github.io) is my portfolio site. Learn about me and check out my projects!

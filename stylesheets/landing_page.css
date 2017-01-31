@@ -304,6 +304,15 @@ header .btn .icon {
   opacity: 1;
 }
 
+.project-links-mobile {
+  visibility: hidden;
+}
+
+.project-links-mobile.links-active {
+  visibility: initial;
+  opacity: 1;
+}
+
 .project img{
   width: 100%;
   position: absolute;

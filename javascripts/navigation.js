@@ -34,4 +34,16 @@ $(function () {
       }, 10);
     }
   });
+
+  $(window).scroll(function (event) {
+    $('.project-links-mobile').each(function () {
+      var $this = $(this);
+      var pos = $this.offset().top - $(window).scrollTop();
+      if (pos < 100) {
+        $this.addClass('links-active');
+      } else {
+        $this.removeClass('links-active');
+      }
+    });
+  });
 });

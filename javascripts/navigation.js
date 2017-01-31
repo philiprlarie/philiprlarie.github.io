@@ -39,7 +39,7 @@ $(function () {
     $('.project-links-mobile').each(function () {
       var $this = $(this);
       var pos = $this.offset().top - $(window).scrollTop();
-      if (pos < 100) {
+      if (pos < 200) {
         $this.addClass('links-active');
       } else {
         $this.removeClass('links-active');
